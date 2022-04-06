@@ -5,7 +5,10 @@
       'serverbutton-isHome': isHome,
       'serverbutton-hasNotification': hasNotification,
     }"
-  ></div>
+  >
+    <img src="../../assets/DiscordLogo.svg" v-if="isHome" />
+    <div class="mentions" v-if="mentions">{{ mentions }}</div>
+  </div>
 </template>
 
 <script>
@@ -34,11 +37,32 @@ export default {
   border-radius: 50%;
   transition: 0.2s;
 
+  img{
+    width: 24px;
+    height: 24px;
+  }
+
   &.active,
   &:hover {
     border-radius: 16px;
     background-color: var(--discord);
   }
+}
+
+.mentions{
+  background-color: var(--notification);
+  width: auto;
+  height: 24px;
+  padding: 0 4px;
+  position: absolute;
+  border-radius: 12px;
+  border: solid 4px var(--quaternary);
+  bottom: -4px;
+  right: -4px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: bold;
+  color:var(--white)
 }
 
 .serverbutton-isHome {
