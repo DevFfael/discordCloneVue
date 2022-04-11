@@ -6,11 +6,11 @@
         <AddCategoryIcon :size="21" />
       </div>
     </div>
-    <ChannelButton />
-    <ChannelButton />
-    <ChannelButton />
-    <ChannelButton />
-    <ChannelButton />
+    <ChannelButton selected channelName="chat-livre" />
+    <ChannelButton channelName="vue-js" />
+    <ChannelButton channelName="Jogos" />
+    <ChannelButton channelName="cs-go" />
+    <ChannelButton channelName="ReactJS" />
   </div>
 </template>
 

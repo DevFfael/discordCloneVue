@@ -1,7 +1,9 @@
 <template>
   <div id="grid">
-    <ServerList />, <ServerName />,
+    <ServerList />
+    <ServerName />
     <ChannelList />
+    <UserInfo />
   </div>
 </template>
 
@@ -9,12 +11,14 @@
 import ServerList from "./ServerList";
 import ServerName from "./ServerName";
 import ChannelList from "./ChannelList";
+import UserInfo from "./UserInfo";
 
 export default {
   components: {
     ServerList,
     ServerName,
     ChannelList,
+    UserInfo,
   },
 };
 </script>
